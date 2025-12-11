@@ -1,0 +1,18 @@
+[package]
+name = 'pcaTreeR'
+publish = false
+version = '0.1.0'
+edition = '2021'
+rust-version = '1.65'
+
+[lib]
+crate-type = [ 'staticlib' ]
+name = 'pcaTreeR'
+
+[dependencies]
+extendr-api = '0.8.1'
+pca_tree = { git = "https://github.com/stela2502/pca_tree.git" }
+
+[profile.release]
+lto = true
+codegen-units = 1
